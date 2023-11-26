@@ -3,41 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online NotePad</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Coding with Friends</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="editor-container">
+        <textarea id="code-editor"></textarea>
+        <button onclick="runCode()">Run Code</button>
+    </div>
 
-    <header>
-        <h1>NotePad</h1>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section id="home">
-        <h2>Welcome to Our Website!</h2>
-        <p>This is the home section of your website.</p>
-    </section>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Write a brief description of your website or company here.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <!-- Add a contact form or other contact information here -->
-    </section>
-
-    <footer>
-        <p>&copy; 2023 Online NotePad - djontop_143. All rights reserved.</p>
-    </footer>
+    <div id="output-container">
+        <iframe id="output-frame"></iframe>
+    </div>
 
     <script src="script.js"></script>
 </body>
