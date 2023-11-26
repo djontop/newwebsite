@@ -3,15 +3,15 @@ function runCode() {
     const outputFrame = document.getElementById('output-frame');
 
     // Clear previous output
-    outputFrame.contentDocument.body.innerHTML = '';
+    outputFrame.srcdoc = '';
 
     try {
         // Execute the code in an iframe
-        const script = outputFrame.contentDocument.createElement('script');
+        const script = document.createElement('script');
         script.text = code;
         outputFrame.contentDocument.body.appendChild(script);
     } catch (error) {
         // Display any errors in the output frame
-        outputFrame.contentDocument.body.innerText = error;
+        outputFrame.srcdoc = error;
     }
 }
